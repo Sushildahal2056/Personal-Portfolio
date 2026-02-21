@@ -6,6 +6,44 @@
   <title>Sushil Dahal | Professional Portfolio</title>
   <link rel="stylesheet" href="./assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Custom styles for the Skills Progress Bars and Download Button */
+    .about-text p { color: var(--light-gray); line-height: 1.8; margin-bottom: 15px; }
+    
+    .skills-item:not(:last-child) { margin-bottom: 25px; }
+    .skill-progress-bg {
+      background: var(--jet);
+      height: 8px;
+      width: 100%;
+      border-radius: 10px;
+    }
+    .skill-progress-fill {
+      background: var(--orange-yellow-crayola);
+      height: 100%;
+      border-radius: 10px;
+    }
+    .title-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 8px;
+    }
+    
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background: var(--orange-yellow-crayola);
+      color: var(--smoky-black);
+      border-radius: 12px;
+      font-weight: 600;
+      transition: 0.3s;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+    .download-btn:hover { opacity: 0.8; }
+  </style>
 </head>
 <body>
 
@@ -50,11 +88,10 @@
             </div>
           </li>
         </ul>
-
         <div class="separator"></div>
-        <div class="download-container" style="padding: 0 20px;">
-          <a href="Professional cv.pdf" download="Sushil_Dahal_CV.pdf" class="form-btn" style="text-decoration:none; display:flex; justify-content:center; align-items:center; gap:10px;">
-            <ion-icon name="download-outline"></ion-icon>
+        <div style="text-align: center;">
+          <a href="Professional cv.pdf" download class="download-btn">
+            <ion-icon name="cloud-download-outline"></ion-icon>
             <span>Download CV</span>
           </a>
         </div>
@@ -74,12 +111,44 @@
       <article class="about active" data-page="about">
         <header><h2 class="h2 article-title">About Me</h2></header>
         <section class="about-text">
-          <p>A self-motivated, hardworking technophile currently pursuing a Master of Software Engineering[cite: 5]. I specialize in Laravel and Python development with a focus on building efficient, user-centric applications[cite: 34, 36].</p>
+          <p>
+            I am a self-motivated Engineering graduate and Software Developer with a strong technical foundation in Laravel, Python, MySQL, and modern web technologies. [cite_start]Currently, I am advancing my expertise by pursuing a Master of Software Engineering at Yoobee College of Creative Innovations[cite: 5].
+          </p>
+          <p>
+            [cite_start]My development approach centers on clean architecture, optimized database design, and modularity[cite: 5]. [cite_start]I have practical experience in both backend and frontend development, translating business requirements into functional, scalable software solutions[cite: 5]. [cite_start]I am committed to continuous learning and adopting industry best practices in version control and collaborative development[cite: 5].
+          </p>
         </section>
       </article>
 
       <article class="resume" data-page="resume">
         <header><h2 class="h2 article-title">Resume</h2></header>
+
+        <section class="skill">
+          <h3 class="h3 skills-title">My Skills</h3>
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">PHP / Laravel</h5><data value="85">85%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 85%;"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Python / Django</h5><data value="80">80%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 80%;"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">HTML / CSS</h5><data value="90">90%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 90%;"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">JavaScript (React)</h5><data value="85">85%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 85%;"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Java</h5><data value="70">70%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width: 70%;"></div></div>
+            </li>
+          </ul>
+        </section>
+
         <section class="timeline">
           <div class="title-wrapper">
             <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
@@ -94,7 +163,26 @@
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Pokhara University</h4>
               <span>2018 - 2023</span>
-              <p class="timeline-text">Bachelor of Computer Engineering [cite: 8, 9]</p>
+              <p class="timeline-text">Bachelor of Computer Engineering</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
+            <h3 class="h3">Work Experience</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Laravel Developer | Chloroleaf Technology</h4>
+              <span>Aug 2024 - Present</span>
+              <p class="timeline-text">Full-time developer specializing in the Laravel framework to develop, maintain, and improve web applications.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Laravel Intern | Chloroleaf Technology</h4>
+              <span>Apr 2024 - July 2024</span>
+              <p class="timeline-text">Gained hands-on experience in technical skills including PHP, database integration, and API development.</p>
             </li>
           </ol>
         </section>
@@ -104,27 +192,27 @@
         <header><h2 class="h2 article-title">Portfolio</h2></header>
         <section class="projects">
           <ul class="project-list">
-            <li class="project-item active" data-filter-item data-category="web development" onclick="openModal('octs')">
+            <li class="project-item active" onclick="openModal('octs')">
               <div class="project-link">
                 <figure class="project-img">
                   <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
                   <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400" alt="OCTS">
                 </figure>
                 <h3 class="project-title">Online College Transfer System</h3>
-                <p class="project-category">Web development</p>
+                <p class="project-category">React & Firebase</p>
               </div>
             </li>
-            <li class="project-item active" data-filter-item data-category="web development" onclick="openModal('sss')">
+            <li class="project-item active" onclick="openModal('sss')">
               <div class="project-link">
                 <figure class="project-img">
                   <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
                   <img src="https://images.unsplash.com/photo-1434031215668-09f4d24607ad?w=400" alt="SSS">
                 </figure>
                 <h3 class="project-title">Student Study System</h3>
-                <p class="project-category">Web development</p>
+                <p class="project-category">Django & PostgreSQL</p>
               </div>
             </li>
-            <li class="project-item active" data-filter-item data-category="web development" onclick="openModal('car')">
+            <li class="project-item active" onclick="openModal('car')">
               <div class="project-link">
                 <figure class="project-img">
                   <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
@@ -142,11 +230,11 @@
         <header><h2 class="h2 article-title">Contact</h2></header>
         <form class="form" data-form>
           <div class="input-wrapper">
-            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-            <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
+            <input type="email" name="email" class="form-input" placeholder="Email address" required>
           </div>
-          <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-          <button class="form-btn" type="submit" disabled data-form-btn>
+          <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
+          <button class="form-btn" type="submit" data-form-btn disabled>
             <ion-icon name="paper-plane"></ion-icon><span>Send Message</span>
           </button>
         </form>
@@ -159,52 +247,46 @@
     <section class="testimonials-modal">
       <button class="modal-close-btn" data-modal-close-btn><ion-icon name="close-outline"></ion-icon></button>
       <div class="modal-content">
-        <h4 class="h3 modal-title" id="modal-title"></h4>
-        <p id="modal-text"></p>
-        <a id="modal-link" href="https://github.com/Sushildahal2056" target="_blank" class="contact-link" style="margin-top:15px; display:inline-block;">View on GitHub</a>
+        <h4 class="h3 modal-title" id="m-title"></h4>
+        <p id="m-text" style="color: var(--light-gray); margin-top: 10px;"></p>
+        <a href="https://github.com/Sushildahal2056" target="_blank" class="download-btn" style="margin-top:20px;">View GitHub</a>
       </div>
     </section>
   </div>
 
   <script>
     'use strict';
-    // PAGE NAVIGATION LOGIC
+    // PAGE NAVIGATION
     const navLinks = document.querySelectorAll("[data-nav-link]");
     const pages = document.querySelectorAll("[data-page]");
     navLinks.forEach(link => {
       link.addEventListener("click", function() {
         const target = this.getAttribute("data-nav-link");
         pages.forEach(page => {
-          if(page.dataset.page === target) {
-            page.classList.add("active");
-            link.classList.add("active");
-          } else {
-            page.classList.remove("active");
-            document.querySelector(`[data-nav-link="${page.dataset.page}"]`).classList.remove("active");
-          }
+          page.classList.toggle("active", page.dataset.page === target);
         });
+        navLinks.forEach(btn => btn.classList.toggle("active", btn === this));
+        window.scrollTo(0, 0);
       });
     });
 
-    // MODAL LOGIC FOR PORTFOLIO
-    const modalContainer = document.querySelector("[data-modal-container]");
-    const modalTitle = document.getElementById("modal-title");
-    const modalText = document.getElementById("modal-text");
-    const projectData = {
-      octs: { title: "Online College Transfer System", text: "Facilitates seamless student transfers within a university using React, Google Cloud, and Firebase[cite: 17, 21]." },
-      sss: { title: "Student Study System", text: "A Django-based portal featuring Notes, Homework, Wikipedia integration, and unit converters[cite: 24, 26]." },
-      car: { title: "Car Rental Management", text: "A backend Python application with SQLite for vehicle records, booking operations, and rental validation." }
+    // MODAL LOGIC
+    const modal = document.querySelector("[data-modal-container]");
+    const pData = {
+      octs: { t: "Online College Transfer System", d: "A system facilitating student transfers using React and Firebase." },
+      sss: { t: "Student Study System", d: "A Django-based study portal with Note and Wiki features using PostgreSQL." },
+      car: { t: "Car Rental Management", d: "A Python application for vehicle records and rental validation using SQLite." }
     };
     function openModal(id) {
-      modalTitle.innerText = projectData[id].title;
-      modalText.innerText = projectData[id].text;
-      modalContainer.classList.add("active");
+      document.getElementById("m-title").innerText = pData[id].t;
+      document.getElementById("m-text").innerText = pData[id].d;
+      modal.classList.add("active");
     }
-    document.querySelector("[data-modal-close-btn]").addEventListener("click", () => modalContainer.classList.remove("active"));
-    document.querySelector("[data-overlay]").addEventListener("click", () => modalContainer.classList.remove("active"));
+    document.querySelector("[data-modal-close-btn]").onclick = () => modal.classList.remove("active");
+    document.querySelector("[data-overlay]").onclick = () => modal.classList.remove("active");
 
     // SIDEBAR TOGGLE
-    document.querySelector("[data-sidebar-btn]").addEventListener("click", () => document.querySelector("[data-sidebar]").classList.toggle("active"));
+    document.querySelector("[data-sidebar-btn]").onclick = () => document.querySelector("[data-sidebar]").classList.toggle("active");
   </script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </body>
